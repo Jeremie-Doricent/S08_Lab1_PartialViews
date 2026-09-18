@@ -19,6 +19,7 @@ namespace ZombieParty.Controllers
         {
             List<ZombieType> zombieTypesList = _baseDonnees.ZombieTypes.ToList();
 
+
             return View(zombieTypesList);
         }
 

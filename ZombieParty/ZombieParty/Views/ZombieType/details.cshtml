@@ -8,10 +8,14 @@
 <h3>Moyenne des points: @Model.PointsAverage</h3>
 <div class="row">
     @*  POUR CHAQUE ZOMBIE:*@
-    @foreach (var item in Model.ZombiesList)
-    {
-        // Ajoutez la vue partielle
-    }
+    <div class="row">
+    
+        @foreach (var item in Model.ZombiesList)
+        {
+            <partial name="_ZombieCard" model="item" />
+        }
+    </div>
+
 
 </div>
 @* SI AUCUN ZOMBIE ASSOCIÉ*@
