@@ -3,6 +3,19 @@
 @{
     ViewData["Title"] = "Create";
 }
+@if (Model.WeaponId != 0)
+{
+    ViewData["Title"] = "Edit";
+}
+else
+{
+    ViewData["Title"] = "Create";
+}
+
+
+<h1> @ViewData["Title"] </h1>
+
+<h4>Weapon</h4>
 
 <h1>Create</h1>
 
@@ -55,6 +68,7 @@
             <div class="form-group mt-2 mb-2">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+            <input asp-for="WeaponId" class="form-control" hidden />
         </form>
     </div>
 </div>
